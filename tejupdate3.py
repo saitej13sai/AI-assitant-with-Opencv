@@ -1,3 +1,4 @@
+#TEJAI PROJECT
 import google.generativeai as genai
 import speech_recognition as sr
 import pyttsx3
@@ -10,7 +11,7 @@ import time
 import smtplib
 
 # Configure Google Generative AI API key
-genai.configure(api_key="AIzaSyBKzRSFkSOl0uJGCWMA9COw7NhlhHPnVgo")
+genai.configure(api_key="a123456787")
 model = genai.GenerativeModel("gemini-pro")
 
 # Initialize the speech recognition recognizer outside the loop
@@ -61,9 +62,9 @@ def wishme():
     say("Hello, I am Tej A.I")
 
 def detect_objects():
-    config_file = "C:\\Users\\saite\\Downloads\\ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt"
-    frozen_model = "C:\\Users\\saite\\Downloads\\frozen_inference_graph.pb"
-    labels_file = "C:\\Users\\saite\\Downloads\\labels.txt"
+    config_file = "C:\\Users\\saite\\Downloads\\ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt"  #make sure download this file
+    frozen_model = "C:\\Users\\saite\\Downloads\\frozen_inference_graph.pb" #make sure download this file
+    labels_file = "C:\\Users\\saite\\Downloads\\labels.txt"  #make sure download this file
 
     net = cv2.dnn_DetectionModel(frozen_model, config_file)
 
@@ -100,7 +101,7 @@ def detect_objects():
 
 def send_mail():
     say("Sure, I will help you send an email. Please provide details.")
-    receiver_email = "saitej13sai@gmail.com"
+    receiver_email = "receivermail@gmail.com" #replace 
     say("Please say the subject of the email.")
     subject = takeCommand()
 
@@ -108,13 +109,13 @@ def send_mail():
     say("Please say the message of the email.")
     message = takeCommand()
 
-    email = "tejteamai@gmail.com"
+    email = "sendermail@gmail.com"   #replace
     text = f"Subject:{subject}\n\n{message}"
 
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
 
-    server.login(email, "epii ffwv ndiw eaku")  # Replace with your email password
+    server.login(email, " email password ")  # Replace with your email password
 
     server.sendmail(email, receiver_email, text)
 
