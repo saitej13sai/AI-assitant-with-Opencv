@@ -12,7 +12,7 @@ import numpy as np
 from keras.models import load_model
 
 # Configure Google Generative AI API key
-genai.configure(api_key="AIzaSyBKzRSFkSOl0uJGCWMA9COw7NhlhHPnVgo")
+genai.configure(api_key="   API KEY  ")
 model = genai.GenerativeModel("gemini-pro")
 
 # Initialize the speech recognition recognizer outside the loop
@@ -161,7 +161,7 @@ def send_mail():
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
 
-    server.login(email, "epii ffwv ndiw eaku")  # Replace with your email password
+    server.login(email, "  gmail app password ")  # Replace with your email password
 
     server.sendmail(email, receiver_email, text)
 
